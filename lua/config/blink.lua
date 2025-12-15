@@ -1,0 +1,17 @@
+-- require("blink.cmp").setup({
+--   sources = {
+--     default = {
+--       "jupynium",
+--       -- ...
+--     },
+--     providers = {
+--       jupynium = {
+--         name = "Jupynium",
+--         module = "jupynium.blink_cmp",
+--         -- Consider higher priority than LSP
+--         score_offset = 100,
+--       },
+--       -- ...
+--     },
+--   },
+-- })
