@@ -1,14 +1,27 @@
 return {
   { "LazyVim/LazyVim", opts = { colorscheme = "doom-one" } },
+
   {
     "folke/snacks.nvim",
     -- Set priority high and lazy to false to ensure it loads first
     priority = 1000,
     lazy = false,
     opts = {
+      notifier = {
+        timeout = 4000, -- default timeout in ms
+      },
+      styles = {
+        notification = {
+          -- Keep other settings, but override 'wrap'
+          wo = {
+            wrap = true, -- <--- Force wrapping for the notification style
+          },
+        },
+      },
       picker = {
         -- This option ensures the override happens
         enabled = true,
+        gh = true,
         ui_select = true,
         -- other options...
       },
