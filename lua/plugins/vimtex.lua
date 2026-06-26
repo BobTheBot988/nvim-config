@@ -6,7 +6,7 @@ return {
     vim.g.vimtex_view_method = "general"
 
     -- 2. Set the "general_viewer" *command* to your full flatpak command
-    vim.g.vimtex_view_general_viewer = "flatpak run org.kde.okular"
+    vim.g.vimtex_view_general_viewer = "okular"
 
     -- 3. Pass the "general_options" that Okular needs for live-reload
     --    This is the magic part that makes live-reload work.

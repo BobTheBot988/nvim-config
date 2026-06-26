@@ -1,3 +1,4 @@
+HOME = os.getenv("HOME")
 return {
   { "LazyVim/LazyVim", opts = { colorscheme = "doom-one" } },
 
@@ -39,7 +40,7 @@ return {
     lazy = false, -- This plugin is already lazy
     ft = "rust",
     config = function()
-      local extension_path = "/var/home/robTheBob/.local/share/nvim/mason/bin/codelldb" .. "/extension/"
+      local extension_path = HOME .. "/.local/share/nvim/mason/bin/codelldb" .. "/extension/"
       local codelldb_path = extension_path .. "adapter/codelldb"
       local liblldb_path = extension_path .. "lldb/lib/liblldb.so"
       -- If you are on Linux, replace the line above with the line below:
@@ -49,7 +50,7 @@ return {
       vim.g.rustaceanvim = {
         server = {
           cmd = function()
-            return { "/var/home/robTheBob/.cargo/bin/rust-analyzer" }
+            return { HOME .. "/.cargo/bin/rust-analyzer" }
           end,
         },
         dap = {
